@@ -1,0 +1,31 @@
+{
+  "$schema": "./node_modules/oxlint/configuration_schema.json",
+  "plugins": ["typescript", "react", "import"],
+  "categories": {
+    "correctness": "off"
+  },
+  "ignorePatterns": ["**/node_modules/**", "**/dist/**"],
+  "rules": {
+    "no-unused-vars": [
+      "error",
+      {
+        "varsIgnorePattern": "^(_|React$)",
+        "args": "none",
+        "caughtErrors": "all",
+        "ignoreRestSiblings": true,
+        "caughtErrorsIgnorePattern": "^_"
+      }
+    ],
+    "curly": ["error", "all"],
+    "typescript/consistent-type-imports": [
+      "error",
+      {
+        "prefer": "type-imports",
+        "disallowTypeAnnotations": false,
+        "fixStyle": "separate-type-imports"
+      }
+    ],
+    "import/no-cycle": "error",
+    "typescript/no-import-type-side-effects": "error"
+  }
+}

@@ -1,0 +1,38 @@
+{
+  "useTabs": false,
+  "tabWidth": 2,
+  "printWidth": 80,
+  "endOfLine": "lf",
+  "singleQuote": false,
+  "jsxSingleQuote": false,
+  "quoteProps": "as-needed",
+  "trailingComma": "es5",
+  "semi": true,
+  "arrowParens": "always",
+  "bracketSameLine": false,
+  "bracketSpacing": true,
+  "objectWrap": "preserve",
+  "sortPackageJson": false,
+  "ignorePatterns": ["**/node_modules/**", "**/dist/**", "**/package-lock.json"],
+  "sortImports": {
+    "customGroups": [
+      {
+        "groupName": "url",
+        "elementNamePattern": ["http://**", "https://**"]
+      },
+      {
+        "groupName": "protocol",
+        "elementNamePattern": ["node:*", "node:*/**", "npm:*"]
+      }
+    ],
+    "groups": [
+      "url",
+      "protocol",
+      ["builtin", "external", "internal", "unknown"],
+      ["parent", "sibling", "index", "style"]
+    ],
+    "newlinesBetween": false,
+    "ignoreCase": true,
+    "partitionByNewline": true
+  }
+}
